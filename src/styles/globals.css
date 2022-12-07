@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: mono, system-ui, sans-serif;
+  }
+}
+
+.nue {
+    @apply border-2 border-black hover:bg-lime-600 hover:text-lime-50 rounded shadow-offset-black;
+}
+
+.highlight {
+    background: linear-gradient(
+        to bottom,
+        transparent 50%,
+        #fce041 50%
+    );
+}
+
+.primary-highlight {
+    background: linear-gradient(
+        to bottom,
+        transparent 50%,
+        #fb7185 50%
+    );
+}
