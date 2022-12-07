@@ -1,15 +1,6 @@
-// import Highlight from "./highlight";
+import Highlight from "./highlight";
 
-export  function Highlight({children,...rest}:any) {
-  return (
-    <>
-    <span className='highlight' {...rest}>
-      {children}
-    </span>
-    {/* <span className='highlight-component'/> */}
-    </>
-  )
-}
+
 export default function Hero() {
 
 
@@ -22,7 +13,7 @@ export default function Hero() {
       <Highlight className="primary-highlight"><h1 className="title-font sm:text-4xl text-9xl font-extrabold text-gray-700  font-sans">Admond Tamang</h1></Highlight>
       <h1 className="title-font sm:text-4xl text-9xl font-extrabold text-gray-700  font-sans">A Developer based in Nepal</h1>
       <p className="mb-8 leading-relaxed">I love building and re-thiking what we do.<br/>
-      I'm a competent, youthful developer who prioritizes more on <Highlight>human-centered design</Highlight>. <br/><br/>  
+      I&apos;m a competent, youthful developer who prioritizes more on <Highlight>human-centered design</Highlight>. <br/><br/>  
       Moreover, a desire to learn <Highlight>new technologies and application architecture</Highlight> and to <Highlight> collaborate in a team</Highlight>.<br/><br/>
       I love <Highlight>learning and building</Highlight> web with new architecture and technologies.
      </p>
@@ -34,12 +25,12 @@ export default function Hero() {
 
                         <a href="https://github.com/admondtamang">
 
-               <button className="text-dark   bg-lime-300 border-2 border-black py-2 px-6 hover:bg-indigo-600 hover:text-lime-50 rounded text-md shadow-offset-black">Linked In</button>
+               <button className="text-dark   bg-lime-300 border-2 border-black py-2 px-6 hover:bg-indigo-600 hover:text-lime-50 rounded text-md shadow-offset-black">Github</button>
            </a>
       </div>
     </div>
     <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6" >
-      <img className="object-cover object-center rounded nue" alt="hero" src="./profile.jpg" width={400} height={200}/>
+      <img className="object-cover object-center rounded nue" alt="profile" src="./profile.jpg" width={400} height={200}/>
     </div>
   </div>
 </section>

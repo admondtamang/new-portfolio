@@ -1,11 +1,10 @@
-
-export default function Highlight({children}:any) {
+export default  function Highlight({children,...rest}:any) {
   return (
-    <div>
-    <span className='highlight  bg-black'>
+    <>
+    <span className='highlight' {...rest}>
       {children}
     </span>
-    <span className='highlight-component'/>
-    </div>
+    {/* <span className='highlight-component'/> */}
+    </>
   )
 }

@@ -4,10 +4,10 @@ module.exports = {
   theme: {
     extend: {
       boxShadow: {
-        "offset-black": "2px 2px black",
+        "offset-black": "4px 4px black",
       },
     },
   },
 
-  // plugins: [require("daisyui")],
+  plugins: [require("daisyui")],
 };
