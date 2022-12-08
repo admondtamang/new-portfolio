@@ -5,52 +5,26 @@ on:
     branches: [ main ]
 
 jobs:
-  # build:
-  #   #  runs-on: self-hosted || ubuntu-latest 
-  #   runs-on: self-hosted
-  #   steps:
-      # Checkout and setup nodejs
-      # - uses: actions/checkout@v2
-      # - uses: actions/setup-node@v1
-      #   with:
-      #     node-version: 16
-      # - run: npm install -g pnpm
-      # - run: pnpm install --frozen-lockfile
-      # - run: pnpm build:static
-      
-      # # Deploy to s3 bucket
-      # - uses: aws-actions/configure-aws-credentials@v1
-      #   name: s3 bucket
-      #   with:
-      #     aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      #     aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      #     aws-region: ap-south-1
-      # - run: aws s3 sync ./out s3://hostel-web
-        
-        # Copy files to server
-  deploy:
+  build:
+    #  runs-on: self-hosted || ubuntu-latest 
     runs-on: self-hosted
     steps:
-      # Checkout and setup nodejs
+#       Checkout and setup nodejs
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v1
         with:
           node-version: 16
-      - run: npm i -g pnpm pm2
-      - run: pnpm i --frozen-lockfile
-      - run: pnpm build
-      - run: pm2 reload next-js
+      - run: npm install -g pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build:static
       
-      # access ssh key 
-      - uses: appleboy/ssh-action@master
-        name: executing remote ssh commands using ssh key
+      # Deploy to s3 bucket
+      - uses: aws-actions/configure-aws-credentials@v1
+        name: s3 bucket
         with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.KEY }}
-          port: ${{ secrets.PORT }}
-          script: |
-              PATH=$PATH:/${{secrets.USERNAME}}/.npm-global/bin
-              node -v
-              whoami
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-south-1
+      - run: aws s3 sync ./out s3://hostel-web
+
               
