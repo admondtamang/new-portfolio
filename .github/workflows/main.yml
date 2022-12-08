@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     #  runs-on: self-hosted || ubuntu-latest 
-    runs-on: self-hosted
+    runs-on: ubuntu-latest 
     steps:
 #       Checkout and setup nodejs
       - uses: actions/checkout@v3
