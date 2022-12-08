@@ -20,11 +20,7 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm build:static
       
-      # Deploy to s3 bucket
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
+       # Deploy to s3 bucket
       - uses: aws-actions/configure-aws-credentials@v1
         name: s3 bucket
         with:
@@ -32,5 +28,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-south-1
       - run: aws s3 sync ./out s3://hostel-web
+     
+
 
               
