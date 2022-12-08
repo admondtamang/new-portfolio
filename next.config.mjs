@@ -22,8 +22,8 @@ export default withMDX({
   pageExtensions: ["md", "mdx", "tsx", "ts", "jsx", "js"],
   reactStrictMode: true,
   swcMinify: true,
-  i18n: {
-    locales: ["en"],
-    defaultLocale: "en",
-  },
+  // i18n: {
+  //   locales: ["en"],
+  //   defaultLocale: "en",
+  // },
 });
