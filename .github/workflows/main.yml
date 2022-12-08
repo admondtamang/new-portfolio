@@ -7,7 +7,9 @@ on:
 jobs:
   build:
     #  runs-on: self-hosted || ubuntu-latest 
-    runs-on: ubuntu-latest 
+    runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
     steps:
 #       Checkout and setup nodejs
       - uses: actions/checkout@v3
@@ -19,6 +21,10 @@ jobs:
       - run: pnpm build:static
       
       # Deploy to s3 bucket
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
       - uses: aws-actions/configure-aws-credentials@v1
         name: s3 bucket
         with:
