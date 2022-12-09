@@ -33,30 +33,30 @@ const Projects = (props: any) => {
         <section>
           <h1 className="mb-4 font-bold"> Projects:</h1>
           <div className="grid grid-cols-4 gap-4">
-            <Button className="" href="https://jsonfeeder.vercel.app/">
+            <LinkButton className="" href="https://jsonfeeder.vercel.app/">
               <b>Json feeder</b>
 
               <p> Dynamic formbuilder.</p>
-            </Button>
-            <Button
+            </LinkButton>
+            <LinkButton
               className=""
               href="https://zen-engelbart-2de07e.netlify.app/"
             >
               <b>IOS web</b>
 
               <p> Ios feel in web.</p>
-            </Button>
+            </LinkButton>
 
-            <Button className="" href="https://next-shippr.vercel.app/">
+            <LinkButton className="" href="https://next-shippr.vercel.app/">
               <b>Shippr</b>
 
               <p> Ecommerce App.</p>
-            </Button>
-            <Button className="" href="https://godapi.vercel.app/">
+            </LinkButton>
+            <LinkButton className="" href="https://godapi.vercel.app/">
               <b>God Api</b>
 
               <p> Postman alternative for web.</p>
-            </Button>
+            </LinkButton>
           </div>
         </section>
       </div>
