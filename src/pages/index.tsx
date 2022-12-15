@@ -16,7 +16,7 @@ const Home: NextPage = () => {
         <meta name="description" content="Admond tamang portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="font-mono">
+      <main className="font-mono ">
         <Header />
         <Hero />
       </main>

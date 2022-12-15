@@ -14,14 +14,14 @@ const Projects = (props: any) => {
 
           <div className="flex flex-col gap-2">
             <LinkButton
-              className=" px-4 py-2"
+              className=" px-4 py-2 dark:text-white"
               href="https://www.npmjs.com/package/pdf-watermark"
             >
               <Highlight> pdf-watermark</Highlight> - Watermark PDF in node
               environment.
             </LinkButton>
             <LinkButton
-              className=" px-4 py-2"
+              className=" px-4 py-2 dark:text-white"
               href="https://www.npmjs.com/package/@admond/multer-ftp"
             >
               <Highlight> multer-ftp </Highlight>- An custom engine for multer
@@ -32,7 +32,7 @@ const Projects = (props: any) => {
 
         <section>
           <h1 className="mb-4 font-bold"> Projects:</h1>
-          <div className="grid grid-cols-4 gap-4">
+          <div className="grid grid-cols-4 gap-4 dark:text-white">
             <LinkButton className="" href="https://jsonfeeder.vercel.app/">
               <b>Json feeder</b>
 
