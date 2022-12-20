@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import ToggleDarkMode from "../common/toggleDarkMode";
 // import ToggleDarkMode from "../common/toggleDarkMode";
 
 export default function Header() {
@@ -14,7 +15,7 @@ export default function Header() {
         </Link>
         <nav className="flex flex-wrap items-center justify-center text-base md:mr-auto	md:ml-4 md:border-l md:border-gray-400 md:py-1 md:pl-4">
           <Link href="projects" className="mr-5 hover:text-gray-900">
-            Projects{" "}
+            Projects
           </Link>
           <Link href="blogs" className="mr-5 hover:text-gray-900">
             Blogs
@@ -23,8 +24,8 @@ export default function Header() {
             Beside
           </Link>
         </nav>
+        <ToggleDarkMode />
         <Link href="/admond-cv.pdf" download>
-          {/* <ToggleDarkMode /> */}
           <button className="nue mt-4 inline-flex items-center rounded border-0 py-1 px-3 text-base focus:outline-none md:mt-0">
             View CV
             <svg

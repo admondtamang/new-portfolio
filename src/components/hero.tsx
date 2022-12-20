@@ -1,8 +1,38 @@
+import { useEffect, useRef } from "react";
 import Highlight from "./highlight";
-
+import { Power2, Power3, gsap, CSSPlugin } from "gsap";
 export default function Hero() {
+  let container = useRef(null);
+  let image = useRef(null);
+  var tl = gsap.timeline({ delay: 0.8 });
+  // const imageReveal = CSSPlugin.get(".image-container");
+  useEffect(() => {
+    //Remove initial flash
+    gsap.to(container.current, {
+      duration: 1,
+      css: { visibility: "visible" },
+    });
+
+    tl.from(image.current, {
+      duration: 1.2,
+      // y: 1280,
+      ease: Power3.easeOut,
+    }).from(
+      image?.current,
+      {
+        duration: 2,
+        scale: 1.2,
+        ease: Power3.easeOut,
+      },
+      "-=2"
+    );
+  }, [tl]);
+
   return (
-    <section className="body-font text-gray-600 dark:text-gray-200">
+    <section
+      className="body-font invisible h-screen text-gray-600 dark:text-gray-200"
+      ref={container}
+    >
       <div className="container mx-auto flex flex-col items-center px-5 py-12 md:flex-row">
         <div className="mb-16 flex flex-col items-center gap-8 text-center md:mb-0 md:w-1/2 md:items-start md:pr-16 md:text-left lg:flex-grow lg:pr-24">
           <p className="rounded-3xl border-4 border-gray-600 bg-white px-4 py-1 font-bold dark:text-gray-800   ">
@@ -42,14 +72,16 @@ export default function Hero() {
             </a>
           </div>
         </div>
-        <div className="w-5/6 md:w-1/2 lg:w-full lg:max-w-lg">
-          <img
-            className="nue rounded object-cover object-center"
-            alt="profile"
-            src="/profile.jpg"
-            width={400}
-            height={200}
-          />
+        <div className="relative w-5/6 bg-slate-500 md:w-1/2 lg:w-full lg:max-w-lg">
+          <div ref={image}>
+            <img
+              className="nue top-0 left-0 right-0 bottom-0 rounded object-cover object-center"
+              alt="profile"
+              src="/profile.jpg"
+              width={400}
+              height={200}
+            />
+          </div>
         </div>
       </div>
     </section>

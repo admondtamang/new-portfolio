@@ -1,11 +1,8 @@
-import Link from "next/link";
-import React from "react";
 import Layout from "../../components/layouts";
 import LinkButton from "../../components/common/linkButton";
 import Highlight from "../../components/highlight";
-import Button from "../../components/common/button";
 
-const Projects = (props: any) => {
+const Projects = () => {
   return (
     <Layout>
       <div className="container mx-auto flex flex-col gap-10">
@@ -22,7 +19,7 @@ const Projects = (props: any) => {
             </LinkButton>
             <LinkButton
               className=" px-4 py-2 dark:text-white"
-              href="https://www.npmjs.com/package/@admond/multer-ftp"
+              href="https://www.npmjs.com/package/multer-ftp-storage"
             >
               <Highlight> multer-ftp </Highlight>- An custom engine for multer
               to directly send data to FTP.
