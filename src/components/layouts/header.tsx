@@ -1,15 +1,19 @@
 import Link from "next/link";
 import React from "react";
 import ToggleDarkMode from "../common/toggleDarkMode";
+import { useRouter } from "next/router";
 // import ToggleDarkMode from "../common/toggleDarkMode";
 
 export default function Header() {
+  const router = useRouter();
   return (
     <header className="body-font text-gray-600 dark:text-white">
       <div className="container mx-auto flex flex-col flex-wrap items-center p-5 md:flex-row">
         <Link
           href="/"
-          className="title-font mb-4 ml-3 flex items-center text-xl font-medium text-gray-900 dark:text-white md:mb-0"
+          className={`${
+            router.pathname == "/" ? "font-extrabold" : ""
+          } title-font mb-4 ml-3 flex items-center text-xl font-medium text-gray-900 dark:text-white md:mb-0`}
         >
           Admond
         </Link>
