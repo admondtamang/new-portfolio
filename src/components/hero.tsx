@@ -2,9 +2,9 @@ import { useEffect, useLayoutEffect, useRef } from "react";
 import Highlight from "./highlight";
 import { Power2, Power3, gsap, CSSPlugin } from "gsap";
 export default function Hero() {
-  let container = useRef(null);
-  let image = useRef(null);
-  var tl = gsap.timeline({ delay: 0.8 });
+  const container = useRef(null);
+  const image = useRef(null);
+  const tl = gsap.timeline({ delay: 0.8 });
   // const imageReveal = CSSPlugin.get(".image-container");
   useLayoutEffect(() => {
     //Remove initial flash
