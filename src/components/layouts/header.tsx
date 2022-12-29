@@ -1,13 +1,16 @@
 import Link from "next/link";
-import React from "react";
 import ToggleDarkMode from "../common/toggleDarkMode";
 import { useRouter } from "next/router";
-// import ToggleDarkMode from "../common/toggleDarkMode";
+import { motion } from "framer-motion";
+import { navAnimation } from "../../utils/animationData";
 
 export default function Header() {
   const router = useRouter();
   return (
-    <header className="body-font text-gray-600 dark:text-white">
+    <motion.header
+      {...navAnimation}
+      className="body-font text-gray-600 dark:text-white"
+    >
       <div className="container mx-auto flex flex-col flex-wrap items-center p-5 md:flex-row">
         <Link
           href="/"
@@ -46,6 +49,6 @@ export default function Header() {
           </button>
         </Link>
       </div>
-    </header>
+    </motion.header>
   );
 }
