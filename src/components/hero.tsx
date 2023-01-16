@@ -29,14 +29,14 @@ export default function Hero() {
 
             <motion.span
               variants={content_variants}
-              className="primary-highlight title-font font-sans text-9xl font-extrabold dark:text-white  sm:text-4xl"
+              className="primary-highlight title-font font-sans text-2xl font-extrabold dark:text-white sm:text-4xl"
             >
               Admond Tamang
             </motion.span>
 
             <motion.h1
               variants={content_variants}
-              className="title-font font-sans text-9xl font-extrabold text-gray-700 dark:text-slate-200  sm:text-4xl"
+              className="title-font font-sans text-2xl font-extrabold text-gray-700 dark:text-slate-200  sm:text-4xl"
             >
               A Developer based in Nepal
             </motion.h1>
