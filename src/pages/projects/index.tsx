@@ -1,8 +1,12 @@
 import Layout from "../../components/layouts";
 import LinkButton from "../../components/common/linkButton";
 import Highlight from "../../components/highlight";
+import MetaTags from "../../components/common/meta";
+import React from "react";
 
-const Projects = () => {
+type Props = {};
+
+const Projects = (props: Props) => {
   const packages = [
     {
       name: "pdf-watermark",
@@ -39,6 +43,13 @@ const Projects = () => {
   ];
   return (
     <Layout>
+      <MetaTags
+        currentPageTitle="Admond Tamang"
+        title="Admond Tamang"
+        description="Portfolio of Admond Tamang. A Developer based in Nepal"
+        image="/favicon.ico"
+        url={"https://admondtamang.com.np"}
+      />
       <div className="container mx-auto flex flex-col gap-10">
         <section>
           <h1 className="mb-4 font-bold"> Npm packages:</h1>

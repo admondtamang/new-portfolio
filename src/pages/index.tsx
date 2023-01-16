@@ -12,19 +12,14 @@ const Home: NextPage = (props) => {
 
   return (
     <>
-      <Head>
-        <title>Admond Tamang</title>
-        <meta name="description" content="Admond tamang portfolio" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <MetaTags
-        currentPageTitle="Our Experts"
+        currentPageTitle="Admond Tamang"
         title="Admond Tamang"
         description="Portfolio of Admond Tamang. A Developer based in Nepal"
         image="/favicon.ico"
         url={"https://admondtamang.com.np"}
       />
+
       <Layout>
         <Hero />
       </Layout>
