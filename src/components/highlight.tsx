@@ -4,7 +4,7 @@ export default function Highlight({ children, ...rest }: any) {
       {" "}
       <span className="highlight" {...rest}>
         {children}
-      </span>
+      </span>{" "}
     </>
   );
 }

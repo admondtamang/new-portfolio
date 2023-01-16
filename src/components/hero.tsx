@@ -47,13 +47,14 @@ export default function Hero() {
               I love building and re-thiking what we do.
               <br />
               I&apos;m a competent, youthful developer who prioritizes more on
-              <Highlight>human-centered design</Highlight>. <br />
+              <Highlight>human-centered design.</Highlight> <br />
               <br />
               Moreover, a desire to learn
               <Highlight>
                 new technologies and application architecture
               </Highlight>
-              and to <Highlight> collaborate in a team</Highlight>.<br />
+              and to <Highlight> collaborate in a team.</Highlight>
+              <br />
               <br />I love <Highlight>learning and building</Highlight> web with
               new architecture and technologies.
             </motion.p>
