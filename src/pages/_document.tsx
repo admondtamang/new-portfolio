@@ -1,7 +1,7 @@
 import { Head, Html, Main, NextScript } from "next/document";
 import { Partytown } from "@builder.io/partytown/react";
 
-export default function Document() {
+export default function Document({}) {
   const NEXT_PUBLIC_GTM = process.env.NEXT_PUBLIC_GTM || "GTM-MD5WPHP";
   return (
     <Html>
