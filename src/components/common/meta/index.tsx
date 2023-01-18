@@ -1,13 +1,13 @@
-import Head from 'next/head';
-import { FC } from 'react';
+import Head from "next/head";
+import { FC } from "react";
 
-const MetaTags: FC<{ currentPageTitle: string; title: string; description: string; url: string; image: string }> = ({
-  currentPageTitle,
-  title,
-  description,
-  url,
-  image,
-}) => {
+const MetaTags: FC<{
+  currentPageTitle: string;
+  title: string;
+  description: string;
+  url: string;
+  image: string;
+}> = ({ currentPageTitle, title, description, url, image }) => {
   const titlePlaceholder = `${currentPageTitle} - ${title}`;
 
   return (
@@ -30,7 +30,12 @@ const MetaTags: FC<{ currentPageTitle: string; title: string; description: strin
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content={image} />
-      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+      <meta
+        name="robots"
+        content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+      />
+
+      <link rel="canonical" href={url} />
     </Head>
   );
 };

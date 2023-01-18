@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@builder.io/partytown': ^0.7.4
   '@mdx-js/loader': ^2.1.5
   '@mdx-js/react': ^2.1.5
   '@next/mdx': ^13.0.6
@@ -35,6 +36,7 @@ specifiers:
   zod: ^3.18.0
 
 dependencies:
+  '@builder.io/partytown': 0.7.4
   '@mdx-js/loader': 2.1.5
   '@mdx-js/react': 2.1.5_react@18.2.0
   '@next/mdx': 13.0.6_wuv4qx5dshjptmdbtsqqkih5iu
@@ -86,6 +88,11 @@ packages:
     dependencies:
       regenerator-runtime: 0.13.11
     dev: true
+
+  /@builder.io/partytown/0.7.4:
+    resolution: {integrity: sha512-dcZBPNQiHbMhvDGmdWRFNe75Z/XYmeZ2bubYmC5BeQpF09ObbPcbSqIP2NaNOFonKlWLfsE6u1790o9ZmlfpIw==}
+    hasBin: true
+    dev: false
 
   /@emotion/is-prop-valid/0.8.8:
     resolution: {integrity: sha512-u5WtneEAr5IDG2Wv65yhunPSMLIpuKsbuOktRojfrEiEvRyC85LgPMZI63cr7NUqT8ZIGdSVg8ZKGxIug4lXcA==}

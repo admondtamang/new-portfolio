@@ -3,14 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "next build",
     "dev": "next dev",
     "postinstall": "prisma generate",
     "build:static": "next build && next export",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "build": "npm run partytown && next build",
+  "partytown": "partytown copylib public/~partytown"
   },
   "dependencies": {
+    "@builder.io/partytown": "^0.7.4",
     "@mdx-js/loader": "^2.1.5",
     "@mdx-js/react": "^2.1.5",
     "@next/mdx": "^13.0.6",
