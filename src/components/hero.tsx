@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   container_stagger,
   content_variants,
@@ -7,8 +8,6 @@ import Highlight from "./highlight";
 import { motion } from "framer-motion";
 
 export default function Hero() {
-  const MotionHighlight = motion(Highlight);
-
   return (
     <>
       <motion.section
@@ -75,16 +74,18 @@ export default function Hero() {
               </a>
             </motion.div>
           </div>
-          <div className="w-5/6 md:w-1/2 lg:w-full lg:max-w-lg">
-            <motion.img
-              variants={content_variants}
+          <motion.div
+            variants={content_variants}
+            className="w-5/6 md:w-1/2 lg:w-full lg:max-w-lg"
+          >
+            <Image
               className="nue rounded object-cover object-center"
               alt="profile"
               src="/profile.jpg"
               width={400}
               height={200}
             />
-          </div>
+          </motion.div>
         </div>
       </motion.section>
     </>
