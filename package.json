@@ -9,7 +9,7 @@
     "lint": "next lint",
     "start": "next start",
     "build": "npm run partytown && next build",
-  "partytown": "partytown copylib public/~partytown"
+    "partytown": "partytown copylib public/~partytown"
   },
   "dependencies": {
     "@builder.io/partytown": "^0.7.4",
@@ -29,6 +29,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-toggle-dark-mode": "^1.1.1",
+    "sharp": "^0.31.3",
     "superjson": "1.9.1",
     "zod": "^3.18.0"
   },

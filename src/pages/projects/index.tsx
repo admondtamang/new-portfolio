@@ -6,7 +6,7 @@ import React from "react";
 
 type Props = {};
 
-const Projects = (props: Props) => {
+const Projects = (props) => {
   const packages = [
     {
       name: "pdf-watermark",
@@ -70,7 +70,7 @@ const Projects = (props: Props) => {
           <h1 className="mb-4 font-bold"> Projects:</h1>
           <div className="grid grid-cols-4 gap-4 text-black dark:text-white">
             {projects.map((row, index) => (
-              <LinkButton className="" href="https://jsonfeeder.vercel.app/">
+              <LinkButton className="" href={row.link}>
                 <b>{row.name}</b>
 
                 <p> {row.description}</p>
