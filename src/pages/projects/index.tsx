@@ -6,7 +6,7 @@ import React from "react";
 
 type Props = {};
 
-const Projects = (props) => {
+const Projects = () => {
   const packages = [
     {
       name: "pdf-watermark",
