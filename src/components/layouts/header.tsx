@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <motion.header
       {...navAnimation}
-      className="body-font text-gray-600 dark:text-white"
+      className="body-font h-[10vh] text-gray-600 dark:text-white"
     >
       <div className="container mx-auto flex flex-col flex-wrap items-center p-5 md:flex-row">
         <Link
