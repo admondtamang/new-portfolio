@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+
+:root {
+    --cell-background: #ADEDB3;
+    --cell-border: #102C13;
+    --cell-text: #031805;
+    --cell-accent: #53B25D;
+    --color-background-primary: #fbf4e9;
+}
+
+
 @layer base {
   html {
     font-family: mono, system-ui, sans-serif;
@@ -11,6 +21,38 @@
 .nue {
     @apply border-2 border-black hover:bg-lime-600 hover:text-lime-50 rounded shadow-offset-black;
 }
+
+.nue-rounded {
+    @apply border-2 border-black hover:bg-lime-600 hover:text-lime-50  shadow-offset-black;
+}
+
+
+.nue-button{
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    position: relative;
+    transition: box-shadow .35s,top .3s,transform .45s;
+    top: 0;
+    left: 0;
+    transform: rotateX(0) rotateY(0) rotateZ(0);
+    box-shadow: 0 1px 0 0 #102C13,0 2px 0 0 #102C13,0 3px 0 0 #102C13;
+
+}
+
+.nue-button:hover {
+    box-shadow: 0 0 0 0 var(--cell-border),0 0 0 0 var(--cell-border),0 0 0 0 var(--cell-border);
+    top: 3px;
+    transform: rotateX(5deg) rotateY(10deg) rotateZ(.5deg);
+}
+
+.nue-button:is(:focus,:active) {
+    --outline-background: var(--color-background-primary);
+    box-shadow: 0 0 0 0 var(--cell-border),0 0 0 0 var(--cell-border),0 0 0 0 var(--cell-border),0 0 0 2px var(--outline-background),0 0 0 4px var(--cell-border);
+    top: 3px;
+    border: 2px solid var(--cell-border)!important;
+    outline: 0;
+}
+
 
 .highlight {
     background: linear-gradient(

@@ -34,8 +34,8 @@ export default function Header() {
         <div className="flex items-center gap-2">
           <ToggleDarkMode />
           <Link href="/admond-cv.pdf" download>
-            <button className="nue mt-4 inline-flex items-center rounded border-0 py-1 px-3 text-base focus:outline-none md:mt-0">
-              View CV
+            <button className="nue nue-button mt-4 flex items-center rounded border-0 py-1 px-3 text-base focus:outline-none md:mt-0">
+              <span>View CV</span>
               <svg
                 fill="none"
                 stroke="currentColor"

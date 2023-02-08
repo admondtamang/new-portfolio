@@ -21,7 +21,7 @@ export default function Hero() {
           <div className="mb-16 flex flex-col items-center gap-8 text-center md:mb-0 md:w-1/2 md:items-start md:pr-16 md:text-left lg:flex-grow lg:pr-24">
             <motion.p
               variants={content_variants}
-              className="rounded-3xl border-4 border-gray-600 bg-white px-4 py-1 font-bold dark:text-gray-800   "
+              className="nue-rounded rounded-3xl border-4 border-gray-600 bg-white px-4 py-1 font-bold dark:text-gray-800   "
             >
               Web Developer
             </motion.p>
@@ -62,13 +62,13 @@ export default function Hero() {
               className="flex justify-center gap-4"
             >
               <a href="https://www.linkedin.com/in/admond-tamang-78a39a134/">
-                <button className="text-md rounded border-2 border-black bg-indigo-300 py-2 px-6 shadow-offset-black hover:bg-lime-600 hover:text-lime-50 dark:text-black">
+                <button className="nue-button text-md rounded border-2 border-black bg-indigo-300 py-2 px-6 shadow-offset-black hover:bg-lime-600 hover:text-lime-50 dark:text-black">
                   Linked In
                 </button>
               </a>
 
               <a href="https://github.com/admondtamang">
-                <button className="text-md rounded border-2 border-black bg-lime-300 py-2 px-6 shadow-offset-black hover:bg-indigo-600 hover:text-lime-50 dark:text-black">
+                <button className="nue-button text-md rounded border-2 border-black bg-lime-300 py-2 px-6 shadow-offset-black hover:bg-indigo-600 hover:text-lime-50 dark:text-black">
                   Github
                 </button>
               </a>
